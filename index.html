@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Cars for Sale</title>
+    <link rel="stylesheet" href="./css/master.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Buy Used Cars</h1>
+      <form action="index.html" method="post">
+        <label for="make">Make</label>
+        <select name="make" id="make">
+          <option value="All">All</option>
+        </select>
+        <label for="model">Model</label>
+        <select name="model" id="model">
+          <option value="All">All</option>
+        </select>
+        <label for="price">Price</label>
+        <select name="price" id="price">
+          <option value="Any">Any</option>
+        </select>
+        <label for="year">Year</label>
+        <select name="year" id="year">
+          <option value="Any">Any</option>
+        </select>
+        <button type="submit" name="filter">Filter</button>
+      </form>
+    </header>
+    <main>
+
+    </main>
+    <script id="car" type="text/x-handlebars">
+      <div class="car" data-make={{ make }} data-model={{ model }} data-year={{ year }} data-price={{ price }}>
+        <img src={{ image }}>
+        <p><strong>{{ make }} {{ model }}</strong></p>
+        <p>Year: {{ year }}</p>
+        <p>Price: ${{ price }}</p>
+        <button type="button" name="buy">Buy</button>
+      </div>
+    </script>
+  </body>
+</html>
