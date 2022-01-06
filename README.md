@@ -6,5 +6,7 @@ Car shop with ability to filter by make, model, price, and year. Created to prac
 
 # Technologies Used
 - JavaScript
+- jQuery
+- Handlebars
 - CSS
 - HTML
